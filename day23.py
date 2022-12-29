@@ -32,3 +32,24 @@ def solution(n, arr1, arr2):
     return answer
 
 solution(5, [9, 20, 28, 18, 11], [30, 1, 21, 17, 28])
+
+#%% 최소직사각형 > 완전탐색
+def solution(sizes):
+    for size in sizes:
+        if size[0] <size[1]:
+            size[0], size[1] = size[1], size[0]
+    max_0 = 0
+    max_1 = 0
+    for i, size in enumerate(sizes):
+        if size[0] > max_0:
+            max_0 = size[0]
+        if size[1] > max_1:
+            max_1 = size[1]
+        
+    print(sizes)
+    answer = max_0*max_1
+    return answer
+
+solution([[14, 4], [19, 6], [6, 16], [18, 7], [7, 11]])
+
+# %
