@@ -26,4 +26,3 @@ def solution(numbers):
             answer.append(s)
 
     return sorted(answer)
-solution([2,1,3,4,1])
